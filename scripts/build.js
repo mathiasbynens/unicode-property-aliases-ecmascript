@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const jsesc = require('jsesc');
-const canonicalProperties = require('unicode-canonical-property-names');
+const canonicalProperties = require('unicode-canonical-property-names-ecmascript');
 
 const parsePropertyAliases = function() {
 	const map = new Map();
