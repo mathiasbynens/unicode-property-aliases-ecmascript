@@ -9,7 +9,6 @@ module.exports = new Map([
 	['Bidi_M', 'Bidi_Mirrored'],
 	['Cased', 'Cased'],
 	['CI', 'Case_Ignorable'],
-	['Comp_Ex', 'Full_Composition_Exclusion'],
 	['CWCF', 'Changes_When_Casefolded'],
 	['CWCM', 'Changes_When_Casemapped'],
 	['CWKCF', 'Changes_When_NFKC_Casefolded'],
