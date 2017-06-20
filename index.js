@@ -37,6 +37,7 @@ module.exports = new Map([
 	['Pat_WS', 'Pattern_White_Space'],
 	['QMark', 'Quotation_Mark'],
 	['Radical', 'Radical'],
+	['RI', 'Regional_Indicator'],
 	['SD', 'Soft_Dotted'],
 	['STerm', 'Sentence_Terminal'],
 	['Term', 'Terminal_Punctuation'],
