@@ -1,5 +1,5 @@
-import test from 'ava';
-import propertyAliases from '../index.js';
+const test = require('ava');
+const propertyAliases = require('../index.js');
 
 test('unicode-property-aliases-ecmascript', t => {
 	t.is(
@@ -21,5 +21,9 @@ test('unicode-property-aliases-ecmascript', t => {
 	t.is(
 		propertyAliases.get('space'),
 		'White_Space'
+	);
+	t.is(
+		propertyAliases.get('EBase'),
+		'Emoji_Modifier_Base'
 	);
 });
