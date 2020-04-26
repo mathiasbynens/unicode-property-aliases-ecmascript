@@ -2,7 +2,7 @@
 
 _unicode-property-aliases-ecmascript_ offers Unicode property alias mappings in an easy-to-consume JavaScript format. It only contains the Unicode property names that are supported in [ECMAScript RegExp property escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
 
-It’s based on [the `PropertyAliases.txt` data for Unicode v13.0.0](http://unicode.org/Public/13.0.0/ucd/PropertyAliases.txt).
+It’s based on Unicode’s `PropertyAliases.txt`.
 
 ## Installation
 
