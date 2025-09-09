@@ -34,7 +34,7 @@
     "unicode-canonical-property-names-ecmascript": "^2.0.0"
   },
   "scripts": {
-    "download": "curl http://unicode.org/Public/15.0.0/ucd/PropertyAliases.txt > data/PropertyAliases.txt",
+    "download": "curl -L https://unicode.org/Public/17.0.0/ucd/PropertyAliases.txt > data/PropertyAliases.txt",
     "build": "node scripts/build.js",
     "test": "ava tests/tests.js"
   }
