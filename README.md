@@ -12,10 +12,10 @@ To use _unicode-property-aliases-ecmascript_ programmatically, install it as a d
 $ npm install unicode-property-aliases-ecmascript
 ```
 
-Then, `require` it:
+Then, `import` it:
 
 ```js
-const propertyAliases = require('unicode-property-aliases-ecmascript');
+import propertyAliases from 'unicode-property-aliases-ecmascript';
 ```
 
 ## Usage

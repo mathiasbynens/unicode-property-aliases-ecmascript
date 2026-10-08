@@ -3,13 +3,14 @@
   "version": "2.2.0",
   "description": "Unicode property alias mappings in JavaScript format for property names that are supported in ECMAScript RegExp property escapes.",
   "homepage": "https://github.com/mathiasbynens/unicode-property-aliases-ecmascript",
-  "main": "index.js",
+  "main": "index.mjs",
+  "exports": "./index.mjs",
   "engines": {
-    "node": ">=4"
+    "node": ">=12.20"
   },
   "files": [
     "LICENSE-MIT.txt",
-    "index.js"
+    "index.mjs"
   ],
   "keywords": [
     "unicode",
@@ -29,12 +30,12 @@
   },
   "bugs": "https://github.com/mathiasbynens/unicode-property-aliases-ecmascript/issues",
   "devDependencies": {
-    "jsesc": "^3.0.2",
-    "unicode-canonical-property-names-ecmascript": "^2.0.0"
+    "jsesc": "^3.1.0",
+    "unicode-canonical-property-names-ecmascript": "^3.0.0"
   },
   "scripts": {
     "download": "curl -L https://unicode.org/Public/18.0.0/ucd/PropertyAliases.txt > data/PropertyAliases.txt",
-    "build": "node scripts/build.js",
-    "test": "node --test tests/tests.js"
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/tests.mjs"
   }
 }

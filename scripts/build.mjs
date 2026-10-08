@@ -1,12 +1,10 @@
-'use strict';
+import fs from 'node:fs/promises';
+import jsesc from 'jsesc';
+import canonicalProperties from 'unicode-canonical-property-names-ecmascript';
 
-const fs = require('fs');
-const jsesc = require('jsesc');
-const canonicalProperties = require('unicode-canonical-property-names-ecmascript');
-
-const parsePropertyAliases = function() {
+const parsePropertyAliases = async () => {
 	const map = new Map();
-	const source = fs.readFileSync('./data/PropertyAliases.txt', 'utf8');
+	const source = await fs.readFile('./data/PropertyAliases.txt', 'utf8');
 	const lines = source.split('\n');
 	for (const line of lines) {
 		if (!line || /^#/.test(line)) {
@@ -30,11 +28,11 @@ const parsePropertyAliases = function() {
 	return map;
 };
 
-const map = parsePropertyAliases();
+const map = await parsePropertyAliases();
 const header = '// Generated using `npm run build`. Do not edit!';
-const output = `${ header }\nmodule.exports = ${
+const output = `${ header }\nexport default ${
 	jsesc(map, {
 		'compact': false
 	})
 };\n`;
-require('fs').writeFileSync('./index.js', output);
+await fs.writeFile('./index.mjs', output);

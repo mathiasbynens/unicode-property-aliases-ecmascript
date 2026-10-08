@@ -1,5 +1,5 @@
 // Generated using `npm run build`. Do not edit!
-module.exports = new Map([
+export default new Map([
 	['scx', 'Script_Extensions'],
 	['sc', 'Script'],
 	['gc', 'General_Category'],
